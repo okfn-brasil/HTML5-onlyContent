@@ -1,6 +1,8 @@
 HTML5-onlyContent
 =================
 
+&nbsp; *(under construction)*
+
 HTML with only content, definition and conversion tools.
 
 ## Motivation ##
