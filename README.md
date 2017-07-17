@@ -3,14 +3,16 @@ HTML5-onlyContent
 
 &nbsp; *(under construction)*
 
-HTML with only content, definition and conversion tools.
+HTML with only content, definition and conversion tools. HTML5 simplified tag subset. 
 
 ## Motivation ##
 
-Many online tools with a "HTML upload" interface, offline softwares with "document loading", input modules of [Content Management Systems](https://en.wikipedia.org/wiki/Content_management_system),
-of [Document Management Systems (DMSs and old EDMs)](https://en.wikipedia.org/wiki/Document_management_system)... They supposed that user is sending full-text content in a whole HTML document (only relevant content are into the tag `body`). This is  because HTML is the "lingua franca" and the best way to do *content-interchange*.
+Digtal content preservation repositories... and many online tools with a "HTML upload" interface, offline softwares with "document loading", input modules of [Content Management Systems](https://en.wikipedia.org/wiki/Content_management_system),
+of [Document Management Systems (DMSs and old EDMs)](https://en.wikipedia.org/wiki/Document_management_system)... They supposed that user is sending full-text content in a whole HTML document (only relevant content are into the tag `body`). This is  because HTML is the "lingua franca" and the best way to do *content-interchange*. 
 
-So, in that context, HTML must be interpreted as "only content" (no text is about menus, sidebars, forms, Javascript, etc.). In that conetxt arises a HTML's DTD variant that can be named "SIMPLIFIED  HTML FOR NON-INTERACTIVE CONTENT", and for short, *HTML-OnlyContent*.
+So, in that context, HTML must be interpreted as "only content". In that conetxt arises an HTML's DTD variant that have no forms, no Javascript for animations or content-generation, no menus or sidebars,  etc.
+
+It is a simplified HTML for non-interactive content, the *HTML-OnlyContent*.
 
 ## The specification  ##
 
