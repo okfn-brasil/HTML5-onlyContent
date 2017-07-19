@@ -7,8 +7,10 @@ The **HTML5-onlyContent** is a content tag suite for XML or HTML formats, used t
 This specification relies on some other underlying specifications.
 
 Main dependence: [W3C/TR/html5](https://www.w3.org/TR/html5). Main sections:
+
 * [HTML5 flow-content tags](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content)
-* ...
+* [HTML5 fragment](https://www.w3.org/TR/html5/infrastructure.html#documentfragment)
+* [HTML5 flow-content](https://www.w3.org/TR/html5/dom.html#flow-content-1).
 
 Rationale and informational dependencies: see [notes.md](notes.md).
 
@@ -18,11 +20,11 @@ Rationale and informational dependencies: see [notes.md](notes.md).
 
 * Text and content flow:
 
-   - Structure:  `address`, `article`, `aside`, `section`, `footer`, `header`.
+   - Structure semantics:  `address`, `article`, `aside`, `section`, `footer`, `header`.
    - List flow: `dl`, `dt`, `dd`, `ol`, `ul`, `li`.
    - General flow:  `blockquote`, `br`, `div`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `pre`.
    - Inline text semantics:  `a`, `abbr`, `bdi`, `bdo`, `br`, `cite`, `code`, `data`, `dfn`, `em`,  `kbd`, `mark`, `q`, `rtc`, `samp`, `small`, `span`, `strong`, `sub`, `sup`, `time`,  `var`, `wbr`.
-   - Presentation:   `b`, `big`, `hr`, `i`, `small`, `s`,  `sub`, `sup`, `u`,  `rp`, `rt`, `ruby`.
+   - Presentation:   `b`, `big`, `hr`, `i`, `rp`, `rt`, `ruby`, `small`, `s`,  `sub`, `sup`, `u`.
 
 * Figures and tables:
 
