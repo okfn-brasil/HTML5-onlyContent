@@ -19,15 +19,14 @@ Rationale and informational dependentes: see [Appendix below](#Appendix - Ration
 * Text and content flow:
 
    - Structure:  `address`, `article`, `aside`, `section`, `footer`, `header`.
-   - List structure: `dl`, `dt`, `dd`, `ol`, `ul`, `li`.
-   - Block and flow:  `blockquote`, `br`, `div`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `pre`.
-   - Inline text semantics:  `a`, `abbr`, `bdi`, `bdo`, `br`, `cite`, `code`, `data`, `dfn`, `em`,  `kbd`, `mark`, `q`, `rp`, `rt`, `rtc`, `ruby`, `samp`, `small`, `span`, `strong`, `sub`, `sup`, `time`,  `var`, `wbr`.
-   - Presentation:   `b`, `big`, `hr`, `i`, `small`, `s`,  `sub`, `sup`, `u`.
+   - List flow: `dl`, `dt`, `dd`, `ol`, `ul`, `li`.
+   - General flow:  `blockquote`, `br`, `div`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `pre`.
+   - Inline text semantics:  `a`, `abbr`, `bdi`, `bdo`, `br`, `cite`, `code`, `data`, `dfn`, `em`,  `kbd`, `mark`, `q`, `rtc`, `samp`, `small`, `span`, `strong`, `sub`, `sup`, `time`,  `var`, `wbr`.
+   - Presentation:   `b`, `big`, `hr`, `i`, `small`, `s`,  `sub`, `sup`, `u`,  `rp`, `rt`, `ruby`.
 
 * Figures and tables:
-
     - `caption`, `figcaption`
-    - `figure`, `img`
+    - `figure`, `img`, `svg`
     - `table`, `tbody`, `tfoot`, `thead`, `td`, `th`, `tr`, `col`, `colgroup`
 
 ### Attributes in the tags
