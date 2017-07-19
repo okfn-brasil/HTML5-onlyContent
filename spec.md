@@ -10,7 +10,7 @@ Main dependence: [W3C/TR/html5](https://www.w3.org/TR/html5). Main sections:
 * [HTML5 flow-content tags](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content)
 * ...
 
-Rationale and informational dependentes: see [Appendix below](#Appendix - Rationale).
+Rationale and informational dependencies: see [notes.md](notes.md).
 
 ## The HTML5-onlyContent tag set
 
@@ -25,8 +25,9 @@ Rationale and informational dependentes: see [Appendix below](#Appendix - Ration
    - Presentation:   `b`, `big`, `hr`, `i`, `small`, `s`,  `sub`, `sup`, `u`,  `rp`, `rt`, `ruby`.
 
 * Figures and tables:
-    - `caption`, `figcaption`
-    - `figure`, `img`, `svg`
+
+    - `caption`, `figcaption`    
+    - `figure`, `img`, `svg`
     - `table`, `tbody`, `tfoot`, `thead`, `td`, `th`, `tr`, `col`, `colgroup`
 
 ### Attributes in the tags
@@ -59,8 +60,10 @@ Minimal rules about the conditional use of some tags.
 
 5. Kinds of content, as *"3.2.4.1.2 Flow content"*, see [flow-content-1](https://www.w3.org/TR/html5/dom.html#flow-content-1).
 
-Mappings:
+Mappings and filters:
 
 * Assisted map from CSS:  from italics to `i` or `em` tags, from bold to `b` or `strong`, from monospace to `code` or `pre`, etc. See inline style transform and final CSS inline properties to tags.
 
 * Map from HTML4 (obsolete tags) to HTML5, see [migration](https://www.w3schools.com/html/html5_migration.asp) and [html5/html4 convertions](https://github.com/ppKrauss/html5-to-html4).
+
+* XSLT of this specification.
