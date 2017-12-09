@@ -22,7 +22,7 @@ Rationale and informational dependencies: see [notes.md](notes.md).
 
    - Structure semantics:  `address`, `article`, `aside`, `section`, `footer`, `header`.
    - List flow: `dl`, `dt`, `dd`, `ol`, `ul`, `li`.
-   - General flow:  `blockquote`, `br`, `div`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `label`, `p`, `pre`.
+   - General flow:  `blockquote`, `br`, `div`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `label`, `p`, `pre`.
    - Inline text semantics:  `a`, `abbr`, `bdi`, `bdo`, `br`, `cite`, `code`, `data`, `dfn`, `em`,  `kbd`, `mark`, `q`, `rtc`, `samp`, `small`, `span`, `strong`, `sub`, `sup`, `time`,  `var`, `wbr`.
    - Presentation:   `b`, `big`, `hr`, `i`, `rp`, `rt`, `ruby`, `small`, `s`,  `sub`, `sup`, `u`.
 
