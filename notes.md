@@ -32,6 +32,34 @@ Selected modules by HTML5-onlyContent as reference-model:
 
 * Base Module: `base`
 
+## The nav tag for auditable metadata
+
+The primary use of `nav`  tag is for navigation interface,  but there are no contradiction and is a good practice to encapsulate "non-official content", so the `nav`  can express this use:
+
+```html
+<article itemscope itemprop="Legislation" itemtype="http://schema.org/Legislation">
+  <nav class="metadata-context"> <!-- non-official content -->
+    <dl itemprop="isPartOf" itemscope itemtype="http://schema.org/PublicationIssue">
+      <dt>Published in</dt> <dd><time itemprop="dateCreated" datetime="2017-11-30">30/11/2017</time></dd>
+      <dt>Issue</dt>       <dd itemprop="issueNumber" itemprop="identifier">229</dd>
+    </dl>
+    <dl>
+      <dt>Jurisdiction</dt>  <dd itemprop="legislationJurisdiction" value="br">Federal</dd>
+      <dt>Authority</dt>     <dd itemprop="legislationPassedBy">Ministry of Foreign Affairs</dd>
+    </dl>
+  </nav>
+  ...  official content of the article ...
+</article>
+```
+
+## The label tag for labeling
+
+The  [HTML5/the-label-element](https://www.w3.org/TR/html5/forms.html#the-label-element)  specification declares *"The label element represents a caption"*, so, there are contradiction in the use of `<label>` for labeling. 
+
+When in no interface context, the `label` remains as a structural part, with the semantic of [aria-label](https://www.w3.org/TR/wai-aria/#aria-label) and the [presentation](https://www.w3.org/TR/wai-aria/#presentation) role. 
+  
+See also [W3C's Nu Validator](https://validator.w3.org/nu/), that accept non-form context use, and Mozilla's guide, content [categories for `label`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label): *"flow content, phrasing content, ..."*. Some discussion at [SO](https://StackOverflow.com/a/32408312/287948).
+
 ## Removed tags
 
 See tags `nav`, `script`, `style`, etc.
