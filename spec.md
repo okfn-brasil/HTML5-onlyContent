@@ -38,11 +38,17 @@ Rationale and informational dependencies: see [notes.md](notes.md).
 
 * Semantic complement: as Microdata or [HTML+RDFa](https://www.w3.org/TR/html-rdfa/).
 
+### Controled extra-tags
+
+See [notes](notes.md) for `<nav class="content-metadata">`. Context: auditable metadata, when content can't use Microdata to express all auditable metadata.
+
 ## The HTML5-onlyContent rules
 
 Minimal rules about the conditional use of some tags.
 
-* Use `svg` tag only as `figure` or `sidebars` content.
+* Use `svg` tag only as `figure` or `aside` content.
+
+* Use `nav` tag only as auditable metadata, that is not a concrete part of the content.
 
 * In special cases, when the use of the tag `script` is valid:
 
