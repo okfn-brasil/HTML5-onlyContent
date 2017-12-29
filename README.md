@@ -1,7 +1,7 @@
 HTML5-onlyContent
 =================
 
-&nbsp; *(under construction)*
+&nbsp; *(waiting for endorsements)*
 
 HTML with only content, definition and conversion tools. HTML5 simplified tag subset. 
 
@@ -22,6 +22,9 @@ See **[spec.md](spec.md)**.  For rationale see [notes.md](notes.md).
 
 ## Tools ##
 
-Some transformation tools, compatible with the definition, are available. See ex. the simple XSLT `onlyContent-filter.xsl`.
+Some transformation tools, compatible with the definition (see [Filtering and normalizing](spec.md#filtering-and-normalizing) section), are available:
+* Simple XSLT tag filter: [`onlyContent-filter.xsl`](src/onlyContent-filter.xsl).
+* HTML-normalize: [`htm_normalize.php`](src/htm_normalize.php), to ensure "same HTML source" of same content.
 
 Another usual (complex) task in this context is to transform all the CSS, and all `class` attributes, into `style` attributes (see. ex. [CssToInlineStyles](https://github.com/tijsverkoyen/CssToInlineStyles) project); where the use of old `font` and `center`  tags, as well normalization of bolds and italics, can be accomplished.
+

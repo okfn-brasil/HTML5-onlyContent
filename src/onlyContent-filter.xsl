@@ -9,17 +9,19 @@
  
 <xsl:output encoding="UTF-8" />
 
-  <!-- FILTERS: -->
+ <!-- FILTERS: -->
 
+  <!-- delete special -->
+  <xsl:template match="processing-instruction()|comment()"></xsl:template>
   <!-- delete blocks -->
-  <xsl:template match="script|form|iframe|object|menu|menuitem|noscript|option|textarea|input|processing-instruction()"></xsl:template>
-    <!-- delete HTML5 -->
-    <xsl:template match="nav|canvas|datalist|details|keygen|optgroup|progress"></xsl:template>
-    <!-- delete HTML4 -->
-    <xsl:template match="applet|frame|frameset|noframes"></xsl:template>
+  <xsl:template match="script|form|iframe|object|menu|menuitem|noscript|option|textarea|input"></xsl:template>
+  <!-- delete HTML5 -->
+  <xsl:template match="canvas|datalist|details|keygen|optgroup|progress"></xsl:template>
+  <!-- delete HTML4 -->
+  <xsl:template match="applet|frame|frameset|noframes"></xsl:template>
 
 
-  <!-- IDENTITY -->
+ <!-- IDENTITY -->
   <xsl:template match="@*|node()"><xsl:copy><xsl:apply-templates select="@*|node()"/></xsl:copy></xsl:template>
 
 </xsl:transform>

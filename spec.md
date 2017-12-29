@@ -42,6 +42,10 @@ Rationale and informational dependencies: see [notes.md](notes.md).
 
 See [notes](notes.md) for `<nav class="content-metadata">`. Context: auditable metadata, when content can't use Microdata to express all auditable metadata.
 
+### CDATA
+
+No [CDATA section](https://en.wikipedia.org/wiki/CDATA) in the content, all UTF-8 and "`&lt;`/`&gt;`/`&amp;` converted" when need to show source code.
+
 ## The HTML5-onlyContent rules
 
 Minimal rules about the conditional use of some tags.
@@ -57,6 +61,13 @@ Minimal rules about the conditional use of some tags.
   - When metadata can't be expressed by `meta`, HTML+RDFa or Microdata, to express a JSON-LD. Example: `<script id="myJson" type="application/json">{name: 'Foo'}</script>`.
 
 * Interactive elements with printable representation: `summary`.
+
+## Filtering and normalizing
+
+As the XHTML5 format can be analysed by XML, and XHTML have less variations tham HTML5, the convention for "normalized format" is **XHTML5-onlyContent**, the standard format for digital preservation and document-comparison.
+
+The converter or filter need also to be an "standard algoritm" as DOMDocument methods and its implementation in [Libxml2](http://xmlsoft.org). As the HTML-to-XHTML need some stadanrds, convention also adopt [Tidy v5.4+](http://api.html-tidy.org). The  [C14N](https://www.w3.org/TR/xml-c14n/) normalization is only for ensure all details like attribute order.
+
 
 ## Conformance
 
