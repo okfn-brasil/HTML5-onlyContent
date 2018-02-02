@@ -68,6 +68,15 @@ As the XHTML5 format can be analysed by XML, and XHTML have less variations tham
 
 The converter or filter need also to be an "standard algoritm" as DOMDocument methods and its implementation in [Libxml2](http://xmlsoft.org). As the HTML-to-XHTML need some stadanrds, convention also adopt [Tidy v5.4+](http://api.html-tidy.org). The  [C14N](https://www.w3.org/TR/xml-c14n/) normalization is only for ensure all details like attribute order.
 
+### Normalization for human-readable source-code
+
+Commom and realiable "Pretty-HTML5" algorithm, as standard reference.
+
+There are a lot of "pretty HTML" libraries, but no one is simple and based on C14N standard. The convertion must be also reliable and easy to reproce in many languages (Javascript, Java, PHP, Python, etc.). Ideal is to use *regular expression* transforms as kernel for specification of the "pretty transforms".
+
+The standard can include a simple library to express the "prettiness" of each style (sub-set of the HTML-OnlyContent standard); 
+and a "basic pretty" as default transform.
+ 
 
 ## Conformance
 

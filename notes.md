@@ -69,3 +69,14 @@ The primary use of `nav`  tag is for navigation interface,  but there are no con
   ...  official content of the article ...
 </article>
 ```
+
+### The need for human-readable source-code
+
+HTML, XML or XHTML5 formats, they **are not human-readable** without basic "pretty format" applyed to its source codes. 
+
+There are a lot of "pretty HTML" libraries, but no one is simple and based on C14N standard. 
+
+There are a nedd for (reliable and) simple algorithm based in regular expression, 
+and a simple toolkit to simplify the expression of the "pretty rules"
+of a convention.
+ 

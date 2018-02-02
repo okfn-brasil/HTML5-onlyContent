@@ -13,20 +13,28 @@ if ($argc<2) $url = 'php://stdin';
 else $url = $argv[1];
 if (!$url) die("\nERRO: sem input definido\n");
 
+$html = file_get_contents($url);
+
 
 $tidy_config = [ // see http://api.html-tidy.org/tidy/quickref_5.4.0.html
-   'indent'=>1, 'output-xhtml'=>1, 'wrap'=>0, 'drop-empty-elements'=>'yes',
-   'add-xml-decl'=>1, 'output-xml'=>1, 'output-encoding'=>'utf8',
-   'preserve-entities'=>'no', 'quote-nbsp'=>'no'
+    'indent'=>'auto'   //not working
+   ,'output-xhtml'=>1,    'wrap'=>0,   'drop-empty-elements'=>'yes'
+   ,'add-xml-decl'=>1,         'output-xml'=>1,      'output-encoding'=>'utf8'
+   ,'preserve-entities'=>'no', 'quote-nbsp'=>'no'
+   ,'break-before-br'=>'no',   'indent-spaces'=>2   // deu pau com 'markup'=>'yes'
+   ,'hide-comments'=>'yes' // not working
+   //'sort-attributes'=>'none'  -- check https://www.w3.org/TR/xml-c14n2
 ]; // cuidados: output-xml faz ignorar  show-body-only; ...
 
+
 $tidy = new tidy;  // requer apt install php7.0-tidy
-$tidy->parseString(file_get_contents($url), $tidy_config, 'utf8');
+$tidy->parseString($html, $tidy_config, 'utf8');
 $tidy->cleanRepair();
+$xml = (string) $tidy;
 
 // Process:
 $dom = new DOMDocument;
-$dom->loadXML( (string) $tidy ); // XHTML
+$dom->loadXML( $xml ); // XHTML
 
 print cleanXML($dom,true);
 
@@ -49,6 +57,7 @@ function cleanXML($dom,$cutElements=false) {
 	$dom2->preserveWhiteSpace = false; 	// before load
 	$dom2->formatOutput = true;      	// any
 	$dom2->loadXML($xC14N);
+	$dom2->formatOutput = true;
 	$dom2->encoding = 'UTF-8';      	// after load
 	return $dom2->saveXML(); // documentElement
 }
